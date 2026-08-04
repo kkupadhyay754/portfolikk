@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>persional portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @media only screen and (max-width:600px){
+            .nav-container{
+                width: 100%;
+                height: 30px;
+                position: fixed;
+                display: flex;
+                padding: 0 1vw;
+                align-items: center;
+                background-color: #ffffff;
+                justify-content: space-between;
+                border-bottom: 1px solid #dadada;
+                box-shadow: 0,0,10px rgba(0,0,0,0.5);
+
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+<div class="nav-container">
+<div class="nav">
+    <div class="port"><h1>port<span>folio</span></h1></div>
+<ul>
+    <li><a href="HOME.HTML">Home</a></li>
+    <li><a href="about.html"> About</a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="mywork.html">My Work</a></li>
+    <li><a href="contact.html" >Contact me</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+
+</ul>
+</div>
+</div>
+
+<div class="container">
+<div class="left-container">
+    <div class="hello">HII.. I AM </div>
+    <div class="name">k k UPADHYAY</div>
+    <div class="about">Web Developer,contant creater, so on!</div>
+    <div class="more about">I am web developer ...I love Tea & <br>coffee.... I am from Bihar (patna)</div>
+        <div class="buttons">
+            <button><a href="my-cv.pdf.pdf" download="my-cv.pdf">Download CV</button></a>
+                <button><a href="contact .html" download="cv.jgp">Contact  me</button></a>
+                <button id="ox">Change mode</button>
+            </button>
+            <div class="pic"><img src="png.jpg.png"></div>
+</div>
+    </div>
+</div>
+</div>    
+
+</body>
+<style>
+    
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+
+
+
+}
+
+.nav-container{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    padding: 0 3vw;
+    align-items: center;
+    background-color: #ffffff;
+    justify-content: space-between;
+    border-bottom: 1px solid #dadada;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 100000;
+
+}
+.nav ul{
+    display: flex;
+    gap: 3vw;
+    margin-top: -3vw;
+    margin-left:35vw;
+}
+.nav li {
+    list-style-type: none;
+  }
+
+  .nav li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5vw;
+    font-weight: 600;
+    position: relative;
+  }
+  .nav li a:hover {
+    border-bottom: 2px solid #ff004f;
+  }
+
+.port h1{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1.4vw;
+}
+.port h1 span{
+    color: aqua;
+    
+
+}
+.container{
+    width: 100%;
+    max-height: 960px ;
+    border: 2px solid black;
+height: 660px;
+}
+.left-container{
+    position: relative;
+    width: 55vw;
+    margin-top: 10vw;
+    margin-left: 8vw;
+}
+.hello{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    margin-top: 2vw;
+}
+.name{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    font-weight: 600;
+    margin-top: 1vw;
+}
+.about{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    margin-top: 1vw;
+}
+.more .about{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    margin-top: 1vw; 
+}
+.buttons button {
+    margin-top: 1vw;
+    padding: 0.5vw;
+     
+     border-radius: 2vw;
+     background-color: aquamarine;
+}
+.buttons a{
+    text-decoration: none;
+    font-weight: 400;
+     letter-spacing: 1px;
+     transform: 0.5s;
+     
+     overflow: hidden;
+    backdrop-filter: blur(15px);
+    
+}
+.pic img{
+    height:33vw;
+    position: relative;
+    margin-left:50vw;
+    margin-top: -23vw;
+
+}
+.pic{
+flex-direction: column;
+padding: 0.7vw;
+}
+
+/*----------------------------------css for small screen -----------------*/
+@media only screen and (max-width:600px){
+    .nav-container{
+    height: 40px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    justify-content: space-between;
+    border-bottom: 1px solid #dadada;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 100000;
+    }
+
+
+}
+
+
+</style>
+<script>
+    let modebtn = document.querySelector("#ox");
+    let currmode = "light";
+    
+    modebtn.addEventListener("click",()=>{
+        if(currmode=="light"){
+            currmode = "dark"
+            document.querySelector("body").style.backgroundColor = "black";
+            document.querySelector("body").style.color = "white";
+             document.querySelector("").style.color = "white";
+        }  
+        else if (currmode=="dark"){
+            currmode = "pink";
+            document.querySelector("body").style.backgroundColor = "pink"
+            document.querySelector("body").style.color = "black";
+        }
+        else{
+            currmode = "light";
+            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.color = "black";
+            document.querySelector("#ok").style.color = "black";
+            
+        }
+        console.log(currmode);
+    });
+
+</script>
+</html>
